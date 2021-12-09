@@ -1,5 +1,5 @@
 const arr = [4, 5, 1, 2, 7, 8, 5, 2, 8]
-const arr5 = ["alma", "armud","heyva"]
+const arr5 = ["alma", "armud", "heyva"]
 
 
 // my filter
@@ -27,11 +27,11 @@ const customReduce = myReduce(arr, (total, value) => {
     return total + value;
 }, 10);
 
-console.log(customFilter);
-console.log(customFind);
-console.log(customEvery);
-console.log(customSome);
-console.log(customReduce);
+console.log("custom filter: " + customFilter);
+console.log("custom find: " + customFind);
+console.log("custom every: " + customEvery);
+console.log("custom some: " + customSome);
+console.log("custom reduce: " + customReduce);
 
 // my filter
 function myFilter(arr, func) {
@@ -84,3 +84,112 @@ function myReduce(arr, func, totalValue) {
 function myPush(arr, item) {
     arr[arr.length] = item;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// function myreduceMain(funcMain,total){
+//     funcMain = myReduce(arr, func, totalvalue);
+//         func = func(total = arr[0], arr[i], i, arr);
+
+//         let result = null;
+//         for (let i = 0; i < arr.length; i++) {
+//             result += func(total = 0, arr[i], i, arr)
+//         }
+//         return totalValue + result;
+//     }
+
+
+
+
+
+
+
+//     const reduce = (reducer, initialValue, array) => {
+//       let value = initialValue;
+
+//       for(let i = 0; i < array.length; i++) {
+//         let currentValue = array[i]
+//         value = reducer(value, currentValue)
+//       }
+
+//       return value;
+//     }
+
+//     const sumOfNumbersCustom = reduce((initialValue, current) => {return initialValue + current}, 100, arr5)
+
+//     console.log("Custom reduce function, " + sumOfNumbersCustom);
