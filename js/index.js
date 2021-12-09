@@ -1,6 +1,5 @@
 const arr = [4, 5, 1, 2, 7, 8, 5, 2, 8]
-const arr5 = ["alma", "armud", "heyva"]
-
+const arr2 = ["alma","armud"]
 
 // my filter
 const customFilter = myFilter(arr, (value) => {
@@ -25,7 +24,7 @@ const customSome = mySome(arr, (value) => {
 // my Reduce
 const customReduce = myReduce(arr, (total, value) => {
     return total + value;
-}, 10);
+});
 
 console.log("custom filter: " + customFilter);
 console.log("custom find: " + customFind);
@@ -71,125 +70,20 @@ function mySome(arr, func) {
     return false;
 }
 
-//my Reduce
-function myReduce(arr, func, totalValue) {
-    let result = null;
-    for (let i = 0; i < arr.length; i++) {
-        result += func(total = 0, arr[i], i, arr)
+//my reduce
+function myReduce(arr, func, total) {
+    let result = total;
+    i= 0;
+    if(total==undefined) {result = arr[i]; i= 1}
+
+    for (; i < arr.length; i++) {
+
+    result = func(result, arr[i], i, arr);
     }
-    return totalValue + result;
+    return result;
 }
 
 //my push
 function myPush(arr, item) {
     arr[arr.length] = item;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// function myreduceMain(funcMain,total){
-//     funcMain = myReduce(arr, func, totalvalue);
-//         func = func(total = arr[0], arr[i], i, arr);
-
-//         let result = null;
-//         for (let i = 0; i < arr.length; i++) {
-//             result += func(total = 0, arr[i], i, arr)
-//         }
-//         return totalValue + result;
-//     }
-
-
-
-
-
-
-
-//     const reduce = (reducer, initialValue, array) => {
-//       let value = initialValue;
-
-//       for(let i = 0; i < array.length; i++) {
-//         let currentValue = array[i]
-//         value = reducer(value, currentValue)
-//       }
-
-//       return value;
-//     }
-
-//     const sumOfNumbersCustom = reduce((initialValue, current) => {return initialValue + current}, 100, arr5)
-
-//     console.log("Custom reduce function, " + sumOfNumbersCustom);
